@@ -5,7 +5,8 @@ from .models import DrawCandidate
 
 
 def index(request):
-    return render(request, 'maszyna_losujaca_app/index.html', {})
+    candidates = DrawCandidate.objects.all()
+    return render(request, 'maszyna_losujaca_app/index.html', {'candidates': candidates})
 
 
 def join(request):
@@ -16,5 +17,3 @@ def join(request):
         return render(request, 'maszyna_losujaca_app/joined.html', {})
     elif request.method == "GET":
         return render(request, 'maszyna_losujaca_app/join.html', {})
-
-
