@@ -9,4 +9,4 @@ class Draw(models.Model):
 class DrawCandidate(models.Model):
     name = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
-    recipient = models.ForeignKey("DrawCandidate", on_delete=models.DO_NOTHING)
+    recipient = models.ForeignKey("DrawCandidate", on_delete=models.DO_NOTHING, null=True)
