@@ -38,6 +38,11 @@ def draw(request):
     return render(request, 'maszyna_losujaca_app/draw.html', {})
 
 
+def secret_list(request):
+    candidates = DrawCandidate.objects.all()
+    return render(request, 'maszyna_losujaca_app/secret_list.html', {'candidates': candidates})
+
+
 def check_result(request):
     if request.method == "POST":
         chosen_candidate = "wylosowana osoba"

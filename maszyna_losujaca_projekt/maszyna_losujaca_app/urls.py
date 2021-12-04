@@ -7,4 +7,5 @@ urlpatterns = [
     path('join', views.join, name='join'),
     path('draw', views.draw, name='draw'),
     path('check_result', views.check_result, name='check_result'),
+    path('secret_list', views.secret_list, name='secret_list'),
 ]
